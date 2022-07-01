@@ -9,7 +9,7 @@ beforeEach(async () => {
     driver.get('http://localhost:3000/')
 })
 afterEach(async () => {
-    driver.sleep(3000)
+    driver.sleep(6000)
 })
 afterAll(async () => {
     driver.quit()
@@ -22,7 +22,7 @@ test('Title shows up when page loads', async () => {
 })
 
 test('Clicking draw button', async () => {
-    const draw = await driver.findElement(By.id('title'))
-    const displayed = await title.isDisplayed()
+    await driver.findElement(By.id('draw')).click()
+    const displayed = await driver.findElement(By.xpath('//div[contains(@id,"choices")'))
     expect(displayed).toBe(true)
 })
