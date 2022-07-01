@@ -7,15 +7,15 @@ const {shuffleArray} = require('./utils')
 app.use(express.json())
 
 app.get('/', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../index.html'))
+    res.sendFile(path.join(__dirname, 'public/index.html'))
 })
 
 app.get('/styles', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../index.css'))
+    res.sendFile(path.join(__dirname, 'public/index.css'))
 })
 
 app.get('/js', (reg,res) => {
-    res.sendFile(path.join(__dirname, '../index.js'))
+    res.sendFile(path.join(__dirname, 'public/index.js'))
 })
 
 
